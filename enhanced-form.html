@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Sign-Up</title>
+</head>
+<body style="font-family: Arial, sans-serif; max-width: 700px; margin: 20px auto; padding: 10px;">
+    <!-- Header -->
+    <header style="margin-bottom: 15px;">
+        <h1 style="margin: 0;">Join Our Community</h1>
+        <p style="margin: 5px 0;">Sign up to connect!</p>
+    </header>
+
+    <!-- Main content -->
+    <main>
+        <!-- Benefits list -->
+        <section style="margin-bottom: 15px;">
+            <h2 style="margin: 0 0 10px;">Why Join?</h2>
+            <ul style="margin: 0; padding-left: 20px;">
+                <li>Exclusive newsletters</li>
+                <li>Fun events</li>
+                <li>Personal tips</li>
+            </ul>
+        </section>
+
+        <!-- Membership table -->
+        <section style="margin-bottom: 15px;">
+            <h2 style="margin: 0 0 10px;">Membership Tiers</h2>
+            <table style="width: 100%; border-collapse: collapse;">
+                <thead>
+                    <tr style="background-color: #e0e0e0;">
+                        <th style="border: 1px solid #ddd; padding: 8px;">Tier</th>
+                        <th style="border: 1px solid #ddd; padding: 8px;">Perks</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="border: 1px solid #ddd; padding: 8px;">Free</td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">Basic access</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #ddd; padding: 8px;">Pro</td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">Events + Support</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Media -->
+        <section style="margin-bottom: 15px;">
+            <h2 style="margin: 0 0 10px;">Our Events</h2>
+            <img src="https://via.placeholder.com/700x150" alt="Community event" style="max-width: 100%; height: auto;">
+            <p style="margin: 5px 0;">Join our fun gatherings!</p>
+        </section>
+
+        <!-- Form -->
+        <section>
+            <h2 style="margin: 0 0 10px;">Sign Up</h2>
+            <form action="/submit" method="post" autocomplete="on" style="background-color: #f4f4f4; padding: 15px; border-radius: 5px;">
+                <label for="name" style="display: block; font-weight: bold; margin-bottom: 5px;">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required pattern="[A-Za-z\s]{2,50}" title="Letters and spaces, 2-50 characters" style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px;">
+
+                <label for="email" style="display: block; font-weight: bold; margin-bottom: 5px;">Email</label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="email" style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px;">
+
+                <label for="password" style="display: block; font-weight: bold; margin-bottom: 5px;">Password</label>
+                <input type="password" id="password" name="password" placeholder="At least 8 characters" required minlength="8" style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px;">
+
+                <label for="age" style="display: block; font-weight: bold; margin-bottom: 5px;">Age</label>
+                <input type="number" id="age" name="age" min="18" max="100" placeholder="Your age" required style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px;">
+
+                <label for="membership" style="display: block; font-weight: bold; margin-bottom: 5px;">Membership</label>
+                <select id="membership" name="membership" required style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                    <option value="" disabled selected>Select tier</option>
+                    <option value="free">Free</option>
+                    <option value="pro">Pro</option>
+                </select>
+
+                <fieldset style="margin-bottom: 10px;">
+                    <legend style="font-weight: bold;">Contact Method</legend>
+                    <label style="margin-right: 10px;"><input type="radio" name="contact" value="email" required> Email</label>
+                    <label><input type="radio" name="contact" value="phone"> Phone</label>
+                </fieldset>
+
+                <label for="reg-date" style="display: block; font-weight: bold; margin-bottom: 5px;">Join Date</label>
+                <input type="date" id="reg-date" name="reg-date" value="2025-08-10" readonly style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px;">
+
+                <label for="comments" style="display: block; font-weight: bold; margin-bottom: 5px;">About You</label>
+                <textarea id="comments" name="comments" rows="3" placeholder="Tell us something!" maxlength="200" style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
+
+                <label style="display: block; margin-bottom: 10px;"><input type="checkbox" name="terms" required> I accept the <a href="/terms">terms</a></label>
+
+                <button type="submit" style="background-color: #4CAF50; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer;">Join Now</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer style="margin-top: 15px;">
+        <p style="margin: 0;">Email: <a href="mailto:info@example.com">info@example.com</a></p>
+    </footer>
+</body>
+</html>
